@@ -1,0 +1,11 @@
+import calendar
+ 
+def Calendar_Calculation(date):
+    day, month, year = map(int, date.split(','))   
+    dayNumber = calendar.weekday(year, month, day)
+    day_of_week =["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    return day_of_week[dayNumber]
+
+date = input("Please enter the date (e.g.2023, 3, 24): ")
+result = Calendar_Calculation(date)
+print(result)
